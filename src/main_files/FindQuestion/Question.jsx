@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export function Question({data}){
+export function Question({data, onDelete}){
 
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -21,7 +21,7 @@ export function Question({data}){
           </button>
         )}
 
-        <button> Delete</button>
+        <button onClick={onDelete}> Delete</button>
             </p>
         <div className="Tags">
         <h5>Tags : {data.tags}</h5>
